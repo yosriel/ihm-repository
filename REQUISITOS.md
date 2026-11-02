@@ -1,6 +1,6 @@
 # Alcance del prototipo Falabella IHM
 
-Este archivo resume las referencias entregadas para orientar el desarrollo. Las funcionalidades de esta lista todavía no están implementadas. La solicitud actual define la base tecnológica: React en `front` y Spring Boot en `back`.
+Este archivo conserva el resumen de las referencias APF1 y APF2. Esta rama desarrolla **solo backend con Spring Boot y MySQL**; el rediseño de interfaces se versiona por separado en [la entrega frontend](https://github.com/yosriel/ihm-repository/blob/codex/feature-frontend-specification/docs/ENTREGA_FRONTEND.md). Su [matriz de rúbricas](https://github.com/yosriel/ihm-repository/blob/codex/feature-frontend-specification/docs/MATRIZ_RUBRICAS.md) incorpora APF1, APF2 y R3. Las funcionalidades visuales de esta lista siguen pendientes de implementación; sus operaciones de catálogo, cotización y simulación ya tienen soporte en el [contrato de API](docs/API.md).
 
 ## Fuentes
 
@@ -57,6 +57,6 @@ Referencia: informe APF2, «Cantidades y costos de la simulación»; presentaci�
 
 El alcance documentado usa datos ficticios y cierre simulado, sin cobros ni pedidos reales. La versión principal es de escritorio; el checkout móvil completo y la accesibilidad necesitan desarrollo y validación adicionales.
 
-Los documentos no definen base de datos, persistencia de carrito, autenticación, inventario, API ni proveedor de validación de direcciones. El aviso de límite de dos unidades del prototipo tampoco establece una regla comercial general. Se resolverán estas decisiones al implementar cada módulo.
+Los documentos no definen una base de datos ni una arquitectura de API. La decisión del usuario establece ahora MySQL: se almacenan catálogo y simulaciones; carrito, favoritos y comparación corresponden al estado del futuro frontend. No hay cuentas ni autenticación en esta etapa. El límite de dos unidades y las seis zonas de domicilio se usan como reglas de la demostración, sin convertirlas en políticas comerciales generales. La validación de dirección comprueba formato, sin proveedor de geocodificación.
 
 Los resultados de evaluación incluidos en APF1 y APF2 corresponden a sus antecedentes académicos. No son pruebas realizadas sobre esta nueva aplicación.
