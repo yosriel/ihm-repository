@@ -9,6 +9,7 @@ import { Home, Catalog } from "./pages/Catalog";
 import { Product, Favorites, Compare } from "./pages/Product";
 import { Cart, DeliveryPage, ReviewPage, Confirmation } from "./pages/Checkout";
 import "./App.css";
+import { Support } from "./components/Support";
 
 function Header() {
   const { pathname, search } = useLocation();
@@ -93,6 +94,7 @@ function Header() {
             {shop.comparison.length > 0 && ` (${shop.comparison.length}/3)`}
           </Link>
         </nav>
+        <Support />
       </header>
     </>
   );
@@ -191,6 +193,7 @@ function Layout() {
           <p>Precios expresados en soles (S/).</p>
         </div>
       </footer>
+      <Support floating />
       <div
         className="sr-only"
         role="status"

@@ -1,0 +1,28 @@
+{
+  "executions": [
+    {
+      "source": "falabella-suite-apf3.json",
+      "stats": {
+        "startTime": "2026-11-03T21:40:13.664Z",
+        "duration": 49850.184,
+        "expected": 34,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "source": "falabella-suite-apf3-nuevos.json",
+      "stats": {
+        "startTime": "2026-11-03T21:45:40.547Z",
+        "duration": 9894.499,
+        "expected": 6,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "totalPassed": 40,
+  "note": "34 casos existentes y 6 nuevos comprobados en ejecuciones separadas; Edge Chromium, Docker local y MySQL real para cuatro casos."
+}

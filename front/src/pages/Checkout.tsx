@@ -27,6 +27,7 @@ import {
   Summary,
 } from "../components/ui";
 import { focusHeading, money } from "../utils";
+import { PaymentDemo } from "../components/PaymentDemo";
 
 function subtotal(
   products: Product[],
@@ -782,6 +783,7 @@ function Review() {
                 </>
               )}
             </section>
+            <PaymentDemo />
             {options.error && (
               <ErrorState message={options.error} retry={options.retry} />
             )}
