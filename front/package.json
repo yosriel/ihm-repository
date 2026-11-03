@@ -13,6 +13,8 @@
     "preview": "vite preview",
     "test:e2e": "playwright test frontend.spec.ts",
     "test:integration": "playwright test integration.spec.ts",
+    "test:apf3": "playwright test apf3.spec.ts",
+    "audit:apf3": "node ../scripts/apf3-audit.cjs",
     "format": "prettier --write src tests playwright.config.ts"
   },
   "dependencies": {

@@ -1,0 +1,1065 @@
+{
+  "date": "2026-11-03T21:45:51.049Z",
+  "baseURL": "http://localhost:5173",
+  "axeVersion": "4.14.0",
+  "browser": "156.0.4314.58",
+  "states": [
+    {
+      "name": "inicio",
+      "width": 320,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 320,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".photo-caption > span"
+            ],
+            [
+              ".photo-caption > strong"
+            ],
+            [
+              ".hero-index"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ayuda",
+      "width": 320,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 320,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#dialog-title"
+            ],
+            [
+              "details:nth-child(1) > summary"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "venta-asistida",
+      "width": 320,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 320,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".support-content > p:nth-child(1)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asesoria",
+      "width": 320,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 320,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".support-content > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "catalogo",
+      "width": 320,
+      "url": "http://localhost:5173/catalogo?q=freidora",
+      "scrollWidth": 320,
+      "title": "Resultados para “freidora” | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "filtros",
+      "width": 320,
+      "url": "http://localhost:5173/catalogo?q=freidora",
+      "scrollWidth": 320,
+      "title": "Resultados para “freidora” | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "producto",
+      "width": 320,
+      "url": "http://localhost:5173/producto/taurus-air-fry",
+      "scrollWidth": 320,
+      "title": "Freidora de aire Air Fry Digital 4 L | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "carrito",
+      "width": 320,
+      "url": "http://localhost:5173/carrito",
+      "scrollWidth": 320,
+      "title": "Tu carrito | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "entrega",
+      "width": 320,
+      "url": "http://localhost:5173/entrega",
+      "scrollWidth": 320,
+      "title": "Elige cómo recibirlo | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "errores",
+      "width": 320,
+      "url": "http://localhost:5173/entrega",
+      "scrollWidth": 320,
+      "title": "Elige cómo recibirlo | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "resumen",
+      "width": 320,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 320,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tarjeta-demo",
+      "width": 320,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 320,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#dialog-title"
+            ],
+            [
+              "#demo-payment-help"
+            ],
+            [
+              ".payment-notice"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tarjeta-error",
+      "width": 320,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 320,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#dialog-title"
+            ],
+            [
+              "#demo-payment-help"
+            ],
+            [
+              "#demo-payment-error"
+            ],
+            [
+              ".payment-notice"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "confirmacion",
+      "width": 320,
+      "url": "http://localhost:5173/confirmacion",
+      "scrollWidth": 320,
+      "title": "¡Una elección bien hecha! | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "espaciado-confirmacion",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "name": "inicio",
+      "width": 390,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 390,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".photo-caption > span"
+            ],
+            [
+              ".photo-caption > strong"
+            ],
+            [
+              ".hero-index"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ayuda",
+      "width": 390,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 390,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "venta-asistida",
+      "width": 390,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 390,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".support-content > p:nth-child(1)"
+            ],
+            [
+              ".support-content > p:nth-child(2)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asesoria",
+      "width": 390,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 390,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".support-content > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "catalogo",
+      "width": 390,
+      "url": "http://localhost:5173/catalogo?q=freidora",
+      "scrollWidth": 390,
+      "title": "Resultados para “freidora” | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "filtros",
+      "width": 390,
+      "url": "http://localhost:5173/catalogo?q=freidora",
+      "scrollWidth": 390,
+      "title": "Resultados para “freidora” | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "producto",
+      "width": 390,
+      "url": "http://localhost:5173/producto/taurus-air-fry",
+      "scrollWidth": 390,
+      "title": "Freidora de aire Air Fry Digital 4 L | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "carrito",
+      "width": 390,
+      "url": "http://localhost:5173/carrito",
+      "scrollWidth": 390,
+      "title": "Tu carrito | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "entrega",
+      "width": 390,
+      "url": "http://localhost:5173/entrega",
+      "scrollWidth": 390,
+      "title": "Elige cómo recibirlo | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "errores",
+      "width": 390,
+      "url": "http://localhost:5173/entrega",
+      "scrollWidth": 390,
+      "title": "Elige cómo recibirlo | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "resumen",
+      "width": 390,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 390,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tarjeta-demo",
+      "width": 390,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 390,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#dialog-title"
+            ],
+            [
+              "#demo-payment-help"
+            ],
+            [
+              ".payment-notice"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tarjeta-error",
+      "width": 390,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 390,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#dialog-title"
+            ],
+            [
+              "#demo-payment-help"
+            ],
+            [
+              "#demo-payment-error"
+            ],
+            [
+              ".payment-notice"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "confirmacion",
+      "width": 390,
+      "url": "http://localhost:5173/confirmacion",
+      "scrollWidth": 390,
+      "title": "¡Una elección bien hecha! | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "espaciado-confirmacion",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "name": "inicio",
+      "width": 768,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 768,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".photo-caption > span"
+            ],
+            [
+              ".photo-caption > strong"
+            ],
+            [
+              ".hero-index"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ayuda",
+      "width": 768,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 768,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "venta-asistida",
+      "width": 768,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 768,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".support-content > p:nth-child(1)"
+            ],
+            [
+              "#advisor-budget-header"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asesoria",
+      "width": 768,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 768,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "catalogo",
+      "width": 768,
+      "url": "http://localhost:5173/catalogo?q=freidora",
+      "scrollWidth": 768,
+      "title": "Resultados para “freidora” | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "filtros",
+      "width": 768,
+      "url": "http://localhost:5173/catalogo?q=freidora",
+      "scrollWidth": 768,
+      "title": "Resultados para “freidora” | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "producto",
+      "width": 768,
+      "url": "http://localhost:5173/producto/taurus-air-fry",
+      "scrollWidth": 768,
+      "title": "Freidora de aire Air Fry Digital 4 L | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "carrito",
+      "width": 768,
+      "url": "http://localhost:5173/carrito",
+      "scrollWidth": 768,
+      "title": "Tu carrito | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "entrega",
+      "width": 768,
+      "url": "http://localhost:5173/entrega",
+      "scrollWidth": 768,
+      "title": "Elige cómo recibirlo | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "errores",
+      "width": 768,
+      "url": "http://localhost:5173/entrega",
+      "scrollWidth": 768,
+      "title": "Elige cómo recibirlo | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "resumen",
+      "width": 768,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 768,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "tarjeta-demo",
+      "width": 768,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 768,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".payment-notice"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tarjeta-error",
+      "width": 768,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 768,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".payment-notice"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "confirmacion",
+      "width": 768,
+      "url": "http://localhost:5173/confirmacion",
+      "scrollWidth": 768,
+      "title": "¡Una elección bien hecha! | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "espaciado-confirmacion",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "name": "inicio",
+      "width": 1440,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 1440,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".photo-caption > span"
+            ],
+            [
+              ".photo-caption > strong"
+            ],
+            [
+              ".hero-index"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ayuda",
+      "width": 1440,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 1440,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "venta-asistida",
+      "width": 1440,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 1440,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#advisor-budget-header"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asesoria",
+      "width": 1440,
+      "url": "http://localhost:5173/",
+      "scrollWidth": 1440,
+      "title": "Tu cocina, a tu manera. | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "catalogo",
+      "width": 1440,
+      "url": "http://localhost:5173/catalogo?q=freidora",
+      "scrollWidth": 1440,
+      "title": "Resultados para “freidora” | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "filtros",
+      "width": 1440,
+      "url": "http://localhost:5173/catalogo?q=freidora",
+      "scrollWidth": 1440,
+      "title": "Resultados para “freidora” | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "producto",
+      "width": 1440,
+      "url": "http://localhost:5173/producto/taurus-air-fry",
+      "scrollWidth": 1440,
+      "title": "Freidora de aire Air Fry Digital 4 L | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "carrito",
+      "width": 1440,
+      "url": "http://localhost:5173/carrito",
+      "scrollWidth": 1440,
+      "title": "Tu carrito | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "entrega",
+      "width": 1440,
+      "url": "http://localhost:5173/entrega",
+      "scrollWidth": 1440,
+      "title": "Elige cómo recibirlo | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "errores",
+      "width": 1440,
+      "url": "http://localhost:5173/entrega",
+      "scrollWidth": 1440,
+      "title": "Elige cómo recibirlo | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "resumen",
+      "width": 1440,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 1440,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".toast > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tarjeta-demo",
+      "width": 1440,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 1440,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#demo-payment-help"
+            ],
+            [
+              ".payment-notice"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tarjeta-error",
+      "width": 1440,
+      "url": "http://localhost:5173/resumen",
+      "scrollWidth": 1440,
+      "title": "Todo listo para revisar | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#demo-payment-help"
+            ],
+            [
+              ".payment-notice"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "confirmacion",
+      "width": 1440,
+      "url": "http://localhost:5173/confirmacion",
+      "scrollWidth": 1440,
+      "title": "¡Una elección bien hecha! | Falabella",
+      "lang": "es",
+      "media": 0,
+      "unnamed": 0,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "espaciado-confirmacion",
+      "width": 1440,
+      "scrollWidth": 1440
+    }
+  ],
+  "keyboard": [
+    {
+      "result": "PASS",
+      "method": "Tab real para alcanzar cada control; Enter y Espacio; sin locator.focus ni ratón",
+      "flow": "búsqueda, precio, producto, carrito, retiro y confirmación",
+      "screenReader": "NO EJECUTADO"
+    }
+  ]
+}
