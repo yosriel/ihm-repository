@@ -1,56 +1,104 @@
-# Falabella IHM
+# Falabella
 
-Backend del prototipo académico de búsqueda y preparación de compra de Falabella, con Spring Boot, Java 21 y MySQL. Los productos y precios son ficticios; el cierre es una simulación sin cobro ni pedido real.
+Aplicación web de catálogo y preparación de compra con React, TypeScript y Vite, conectada a una API Spring Boot con MySQL. Conserva dos procesos: buscar, filtrar y seleccionar productos; revisar el carrito, configurar la entrega y confirmar la selección.
 
-Esta rama, `feature-backend.structure`, entrega **el backend**. La carpeta `front` conserva la base heredada de `dev`. La documentación de rediseño, accesibilidad y responsividad se versiona por separado en [la rama de especificación frontend](https://github.com/yosriel/ihm-repository/tree/codex/feature-frontend-specification).
+La interfaz utiliza lenguaje de tienda. El cierre sigue siendo una simulación del backend: no procesa pagos, pedidos comerciales ni reservas de inventario.
 
-## Documentación del backend
+## Estado de esta rama
+
+`feature/apf3-frontend` incorpora el frontend funcional sobre el backend de `feature-backend.structure`. El catálogo, los formularios y la confirmación consumen la API existente. La especificación previa de interfaz se conserva en [feature-frontend.specification](https://github.com/yosriel/ihm-repository/tree/feature-frontend.specification/docs).
+
+| Área | Implementación |
+| --- | --- |
+| Búsqueda y selección | Catálogo, filtros combinables y reversibles, ordenamiento, paginación y ficha de producto |
+| Colecciones | Favoritos persistidos en el navegador y comparación de hasta tres productos |
+| Carrito | Agregado, edición de cantidades, límites, eliminación y estado vacío |
+| Entrega | Domicilio o retiro compatible, dirección con alternativa sin número y revisión explícita |
+| Cierre | Cotización del servidor, aceptación de condiciones, confirmación y reintentos idempotentes |
+| Accesibilidad | Controles nativos, etiquetas, alternativas textuales, foco, teclado y anuncios de estado |
+| Adaptación | Distribuciones de escritorio y móvil, con pruebas de reflow |
+
+## Estructura
+
+```text
+ihm-repository/
+├── front/                 Aplicación React y pruebas de navegador
+│   ├── public/images/     Fotografías de productos
+│   ├── src/               Pantallas, componentes, estado y cliente HTTP
+│   └── tests/             Casos aislados y pruebas con la API real
+├── back/                  API Spring Boot, migraciones y pruebas
+├── docs/                  Arquitectura, contrato y verificación
+└── REQUISITOS.md          Alcance e historial de requisitos
+```
+
+## Requisitos
+
+- Node.js compatible con `front/package.json`: `^22.12.0 || >=24.0.0`, con npm.
+- JDK 21 para el backend y `JAVA_HOME` configurado.
+- MySQL dedicado al proyecto. Puede prepararse con Docker Compose según [la guía del backend](back/README.md).
+- Acceso a Internet para la primera instalación de dependencias.
+
+## Ejecutar en desarrollo
+
+Primero prepara la base y define `DB_URL`, `DB_USERNAME` y `DB_PASSWORD` siguiendo [back/README.md](back/README.md). Spring Boot no importa automáticamente el `.env` de Docker Compose.
+
+Terminal 1, desde la raíz, en macOS o Linux:
+
+```bash
+cd back
+sh ./mvnw spring-boot:run
+```
+
+En Windows, desde `back`, utiliza `.\mvnw.cmd spring-boot:run`.
+
+Terminal 2, desde la raíz:
+
+```bash
+cd front
+npm ci
+npm run dev
+```
+
+Abre [http://localhost:5173](http://localhost:5173). Vite redirige `/api` a `http://localhost:8080` durante el desarrollo. El puerto 5173 es fijo: si está ocupado, Vite informa el conflicto.
+
+Para cambiar la configuración, copia `front/.env.example` a `front/.env.local`. Consulta [la guía de arranque frontend](front/README.md).
+
+## Verificar
+
+Desde `front`:
+
+```bash
+npm run lint
+npm run build
+npx playwright install chromium
+npm run test:e2e
+```
+
+Las pruebas aisladas simulan las respuestas HTTP y no necesitan MySQL. Las pruebas de integración requieren la API y una base de desarrollo disponibles:
+
+```bash
+IHM_LIVE_API=1 npm run test:integration
+```
+
+En PowerShell, define primero `$env:IHM_LIVE_API = '1'` y ejecuta `npm run test:integration`.
+
+Desde `back`, `sh ./mvnw verify` ejecuta la suite rápida existente. Las pruebas MySQL adicionales tienen sus propias instrucciones en [back/README.md](back/README.md).
+
+## Documentación
 
 | Documento | Contenido |
 | --- | --- |
-| [Contrato de API](docs/API.md) | Endpoints, filtros, paginación, datos, ejemplos, errores e idempotencia |
-| [Modelo de datos](docs/BASE_DATOS.md) | Tablas MySQL, relaciones, migraciones y datos de demostración |
-| [Verificación](docs/VERIFICACION.md) | Comprobaciones realmente ejecutadas y sus límites |
+| [Frontend](front/README.md) | Instalación, variables, comandos y solución de problemas |
+| [Arquitectura frontend](docs/FRONTEND.md) | Rutas, componentes, estado, API y decisiones de accesibilidad |
+| [Verificación frontend](docs/VERIFICACION_FRONTEND.md) | Pruebas ejecutadas, revisión WAVE y pendientes |
+| [Contrato de API](docs/API.md) | Operaciones, datos, errores y reglas de finalización |
+| [Base de datos](docs/BASE_DATOS.md) | Tablas, relaciones y migraciones |
+| [Verificación backend](docs/VERIFICACION.md) | Registro histórico de la entrega del backend |
+| [Fuentes de imágenes](docs/FUENTES_IMAGENES.md) | Procedencia de las fotografías referenciales |
+| [Requisitos](REQUISITOS.md) | Relación con los procesos anteriores y alcance vigente |
 
-La [entrega frontend en Markdown](https://github.com/yosriel/ihm-repository/blob/codex/feature-frontend-specification/docs/ENTREGA_FRONTEND.md) define inicio, catálogo, filtros, comparación, ficha, favoritos, carrito, entrega, revisión y confirmación. Estas interfaces están **pendientes de implementación por el equipo frontend** y no forman parte del cambio de esta rama.
+## Alcance de publicación
 
-## Backend implementado
+`npm run build` genera `front/dist`. El despliegue necesita servir las rutas de la SPA con fallback a `index.html` y dirigir `/api` al backend, o configurar una URL pública de API con su CORS correspondiente. El proxy de Vite solo funciona durante el desarrollo.
 
-- Catálogo almacenado en MySQL, con búsqueda, seis criterios principales de filtrado, atributos secundarios, orden y paginación.
-- Detalle de producto y metadatos de filtros y entrega.
-- Cotización calculada con precios del servidor y validación de cantidades/modalidad.
-- Simulación con validación de dirección y condiciones, persistencia transaccional y reintentos sin duplicados.
-- Errores JSON asociados a campos y CORS por orígenes explícitos.
-- Migraciones Flyway y configuración local de MySQL mediante Docker Compose o instalación propia.
-
-Carrito, favoritos y comparación serán estado del cliente en esta etapa. No hay cuentas ni sincronización entre dispositivos. La meta multiplataforma se especifica como interfaz responsive, accesible y funcional, sin atribuirle una sincronización que no existe.
-
-## Arranque
-
-Requisitos: JDK 21, `JAVA_HOME`, y una base MySQL dedicada con credenciales. No se necesita Maven global.
-
-Desde `back`, prepara MySQL con [las instrucciones del backend](back/README.md), configura `DB_URL`, `DB_USERNAME` y `DB_PASSWORD`, y ejecuta:
-
-```powershell
-.\mvnw.cmd spring-boot:run
-```
-
-API local: [http://localhost:8080/api/health](http://localhost:8080/api/health). Salud de la base: [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health).
-
-El backend requiere MySQL durante la ejecución normal. H2 está restringido a las pruebas rápidas y no es una alternativa silenciosa de producción.
-
-## Pruebas
-
-Desde `back`:
-
-```powershell
-.\mvnw.cmd verify
-```
-
-Para las pruebas adicionales con MySQL real, configurar una base dedicada cuyo nombre termine en `_test`, definir `IT_DB_URL`, `IT_DB_USERNAME` e `IT_DB_PASSWORD`, y ejecutar:
-
-```powershell
-.\mvnw.cmd -Pmysql-it verify
-```
-
-Consulta [VERIFICACION.md](docs/VERIFICACION.md) para los resultados de esta entrega. Las auditorías visuales, WAVE, NVDA y sesiones de usuarios del nuevo frontend siguen pendientes; el código del backend no sustituye la evidencia de las rúbricas.
+Esta rama no incluye despliegue ni flujo de CI. NVDA y las sesiones con grupos de usuarios siguen pendientes; los resultados automatizados no constituyen una certificación WCAG.
