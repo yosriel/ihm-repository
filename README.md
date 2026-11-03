@@ -6,7 +6,7 @@ La interfaz utiliza lenguaje de tienda. El cierre sigue siendo una simulación d
 
 ## Estado de esta rama
 
-`feature/apf3-frontend` incorpora el frontend funcional sobre el backend de `feature-backend.structure`. El catálogo, los formularios y la confirmación consumen la API existente. La especificación previa de interfaz se conserva en [feature-frontend.specification](https://github.com/yosriel/ihm-repository/tree/feature-frontend.specification/docs).
+`feature/apf3-frontend` incorpora el frontend funcional sobre el backend de `feature-backend.structure`. El catálogo, los formularios y la confirmación consumen la API existente. También conserva la [especificación previa de interfaz](docs/README_FRONTEND.md), integrada desde `dev` como antecedente de la implementación.
 
 | Área | Implementación |
 | --- | --- |
@@ -89,6 +89,7 @@ Desde `back`, `sh ./mvnw verify` ejecuta la suite rápida existente. Las pruebas
 | Documento | Contenido |
 | --- | --- |
 | [Frontend](front/README.md) | Instalación, variables, comandos y solución de problemas |
+| [Especificación previa](docs/README_FRONTEND.md) | Guías originales de diseño y planificación |
 | [Arquitectura frontend](docs/FRONTEND.md) | Rutas, componentes, estado, API y decisiones de accesibilidad |
 | [Verificación frontend](docs/VERIFICACION_FRONTEND.md) | Pruebas ejecutadas, revisión WAVE y pendientes |
 | [Contrato de API](docs/API.md) | Operaciones, datos, errores y reglas de finalización |

@@ -49,4 +49,12 @@ El servidor recomendado por Compose es MySQL 8.4. Se validó la configuración d
 
 Al entregar el backend el 2 de noviembre todavía no se habían desarrollado nuevas pantallas ni ejecutado comprobaciones del rediseño. Ese estado histórico fue actualizado por la implementación de `feature/apf3-frontend`; los resultados actuales y sus pendientes se registran en [VERIFICACION_FRONTEND.md](VERIFICACION_FRONTEND.md).
 
-[La guía frontend](https://github.com/yosriel/ihm-repository/blob/feature-frontend.specification/docs/GUIA_FRONTEND.md), versionada en su propia rama, define los casos por tamaño, plataforma y estado. [La matriz de rúbricas](https://github.com/yosriel/ihm-repository/blob/feature-frontend.specification/docs/MATRIZ_RUBRICAS.md) identifica la auditoría, las capturas anotadas, los grupos, las métricas y las evidencias humanas que siguen pendientes. Los resultados de backend no demuestran conformidad WCAG ni completan por sí solos las rúbricas.
+[La especificación frontend previa](GUIA_FRONTEND.md), conservada en este repositorio, define los casos por tamaño, plataforma y estado. [La matriz de rúbricas](MATRIZ_RUBRICAS.md) identifica la auditoría, las capturas anotadas, los grupos, las métricas y las evidencias humanas que siguen pendientes. Los resultados de backend no demuestran conformidad WCAG ni completan por sí solos las rúbricas.
+
+## Integración en dev el 3 de noviembre de 2026
+
+Se fusionaron `feature-backend.structure` (`cb0df79`) y `feature-frontend.specification` (`5d60eb8`) mediante dos commits de integración separados, sin conflictos. El código de `front` permanece como en la base inicial; la rama frontend aporta especificaciones y fotografías referenciales.
+
+Se volvió a ejecutar `back/mvnw.cmd -B verify` sobre la versión integrada: **53 pruebas, 0 fallos y 0 errores**, con generación del JAR. También se comprobaron los enlaces locales de Markdown y se sustituyeron las referencias al nombre anterior de la rama frontend.
+
+Las tres pruebas con MySQL real corresponden a la verificación del 2 de noviembre descrita arriba; no se repitieron durante esta integración. Esta fusión no configura ni inicia una base permanente del equipo.
