@@ -75,10 +75,16 @@ test("full home delivery, validation, no number and confirmed total", async ({
     page.getByText("Total confirmado", { exact: true }),
   ).toBeVisible();
   await expect(page.locator(".summary-total")).toContainText("401.90");
+  await expect(page.locator("#simulation-scope")).toContainText(
+    "No se realizará ningún cobro",
+  );
   await expect(
     page.getByRole("button", { name: "Confirmar compra" }),
   ).toBeDisabled();
   await page.getByRole("button", { name: "Ver condiciones de compra" }).click();
+  await expect(page.getByRole("dialog")).toContainText(
+    "No se realizará ningún cobro",
+  );
   await audit(page);
   await page.keyboard.press("Escape");
   await expect(
@@ -92,6 +98,9 @@ test("full home delivery, validation, no number and confirmed total", async ({
   ).toBeVisible();
   await expect(page.locator(".confirmation-receipt")).toContainText("SIM-");
   await expect(page.locator(".summary-total")).toContainText("401.90");
+  await expect(page.locator(".confirmation")).toContainText(
+    "No se realizó ningún cobro",
+  );
   await audit(page);
 });
 test("pickup avoids address and quantities persist between routes", async ({
@@ -107,6 +116,7 @@ test("pickup avoids address and quantities persist between routes", async ({
   ).toBeDisabled();
   await page.getByRole("link", { name: "Continuar con la entrega" }).click();
   await page.locator('input[value="pickup"]').check();
+  await expect(page.locator(".pickup-detail")).toContainText("demostración");
   await expect(page.getByLabel("Calle, avenida o jirón")).toHaveCount(0);
   await page.getByRole("button", { name: "Continuar a revisión" }).click();
   await expect(page.locator(".summary-total")).toContainText("778.00");

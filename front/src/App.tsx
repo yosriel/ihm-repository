@@ -187,7 +187,7 @@ function Layout() {
           </Link>
         </div>
         <div className="footer-bottom">
-          <p>Tu cocina, a tu manera.</p>
+          <p>Prototipo académico · Catálogo de demostración.</p>
           <p>Precios expresados en soles (S/).</p>
         </div>
       </footer>

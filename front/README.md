@@ -44,6 +44,11 @@ Para usar explícitamente la dirección IPv4 local:
 npm run dev -- --host 127.0.0.1
 ```
 
+Ese origen es distinto de `localhost`. Si eliges `127.0.0.1`, configura
+`FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173` en la terminal del
+backend y reinícialo. Las pruebas usan `http://localhost:5173`, que coincide con
+el origen permitido por defecto; no requieren ampliar CORS para ese caso.
+
 ## Funciones
 
 - Inicio con búsqueda y selección de productos.

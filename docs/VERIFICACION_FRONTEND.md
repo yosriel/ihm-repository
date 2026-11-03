@@ -66,6 +66,16 @@ Debe verse el foco y no debe perderse acceso a ninguna acción necesaria. La pru
 
 ## Pendientes
 
+### Correcciones de revisión del PR 1
+
+El 3 de noviembre de 2026 se alinearon el origen, la URL de espera y el servidor de Playwright con `http://localhost:5173`, permitido por el backend predeterminado. Para ejecutar manualmente desde `127.0.0.1`, el README explica cómo añadir ese origen a `FRONTEND_ORIGINS` y reiniciar la API.
+
+Se añadieron avisos visibles de simulación sin cobros ni pedidos reales junto a la aceptación, en el diálogo de condiciones y en la confirmación, además del pie académico y el punto de retiro sin recortar. Los casos existentes de domicilio y retiro comprueban esos avisos.
+
+La nueva ejecución en Windows con Edge/Chromium y MySQL 8.0.46 temporal aislado aprobó **34 pruebas: 30 de interfaz y 4 de integración HTTP real**. La API usó su configuración CORS predeterminada. Build y lint también pasaron. La base temporal y la API de comprobación se detuvieron al terminar; no se modificó el servicio MySQL existente. Estos resultados no acreditan una auditoría WAVE actualizada ni pruebas con NVDA o dispositivos físicos.
+
+### Evidencia manual y despliegue
+
 - Ejecutar NVDA en Windows y registrar los anuncios de ambos procesos. Su compatibilidad no se presenta como comprobada.
 - Realizar las sesiones con dos grupos y conservar videos, tiempos, errores y citas auténticas.
 - Generar capturas anotadas definitivas y comparativas con la web original para las barreras críticas y altas.

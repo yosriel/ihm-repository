@@ -94,6 +94,6 @@ Consulta [VERIFICACION_FRONTEND.md](VERIFICACION_FRONTEND.md) para separar las c
 
 ## Presentación y recursos
 
-La interfaz utiliza textos de tienda y no muestra rótulos académicos en la navegación o el catálogo. El alcance simulado se conserva en esta documentación técnica y en el contrato de API.
+La interfaz conserva los textos de tienda y muestra el carácter académico del catálogo en el pie de página. Antes de aceptar las condiciones y en la confirmación se explica que no hay cobros ni pedidos reales. El punto de retiro muestra su nombre y dirección completos, incluido el aviso de demostración de la API.
 
 Las fotografías se copian a `public/images` con los nombres utilizados por el catálogo. Su procedencia y carácter referencial se registran en [FUENTES_IMAGENES.md](FUENTES_IMAGENES.md).

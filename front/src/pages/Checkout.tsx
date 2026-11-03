@@ -454,8 +454,8 @@ function DeliveryForm() {
           ) : (
             <section className="pickup-detail">
               <Icon name="store" size={32} />
-              <h2>Punto de retiro</h2>
-              <p>{config.pickupPoint.address.split("·")[0].trim()}</p>
+              <h2>{config.pickupPoint.name}</h2>
+              <p>{config.pickupPoint.address}</p>
               <p className="field-help">
                 Revisa la ubicación y el costo antes de continuar.
               </p>
@@ -771,10 +771,8 @@ function Review() {
                 )
               ) : (
                 <>
-                  <p>Punto de retiro</p>
-                  <p className="muted">
-                    {options.data?.pickupPoint.address.split("·")[0].trim()}
-                  </p>
+                  <p>{options.data?.pickupPoint.name}</p>
+                  <p className="muted">{options.data?.pickupPoint.address}</p>
                   {invalidDelivery && (
                     <p className="field-error">
                       Un producto solo admite domicilio.{" "}
@@ -805,11 +803,16 @@ function Review() {
               </div>
             )}
             <form onSubmit={finish}>
+              <p className="field-help" id="simulation-scope">
+                Esta es una simulación académica. No se realizará ningún cobro
+                ni se enviará un pedido real.
+              </p>
               <label className="checkbox-label terms-check">
                 <input
                   type="checkbox"
                   checked={accepted}
                   disabled={busy}
+                  aria-describedby="simulation-scope"
                   onChange={(event) => setAccepted(event.target.checked)}
                 />
                 <span>Acepto las condiciones de compra.</span>
@@ -885,6 +888,11 @@ function Review() {
         >
           <div className="terms-copy">
             <p>
+              Esta es una simulación académica con datos de demostración. No se
+              realizará ningún cobro ni se enviará un pedido real. El punto de
+              retiro es referencial y no tiene atención real.
+            </p>
+            <p>
               Revisa los productos, las cantidades, la dirección y la modalidad
               de entrega antes de confirmar.
             </p>
@@ -929,6 +937,10 @@ export function Confirmation() {
       </h1>
       <h2>Confirmación completada</h2>
       <p className="lead">Tu selección se registró correctamente.</p>
+      <p className="info-message">
+        Simulación académica completada. No se realizó ningún cobro ni se envió
+        un pedido real.
+      </p>
       <div className="confirmation-receipt">
         <p className="receipt-id">
           <span>Número de confirmación</span>
