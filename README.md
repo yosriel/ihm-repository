@@ -4,6 +4,20 @@ Aplicación web de catálogo y preparación de compra con React, TypeScript y Vi
 
 La interfaz utiliza lenguaje de tienda. El cierre sigue siendo una simulación del backend: no procesa pagos, pedidos comerciales ni reservas de inventario.
 
+## Levantar todo con Docker
+
+Con Docker Desktop abierto, desde la raíz del repositorio:
+
+```powershell
+docker compose up --build -d --wait
+```
+
+Abre [http://localhost:5173](http://localhost:5173). El comando construye frontend y backend, inicia MySQL y aplica las migraciones con los productos de demostración. La primera construcción necesita Internet. No requiere instalar Node, Java ni MySQL en el equipo.
+
+Para detenerlo: `docker compose stop`. Para levantarlo nuevamente: `docker compose up -d --wait`. Los datos se conservan en un volumen. `docker compose ps` muestra el estado y `docker compose logs --tail=100` permite revisar problemas de arranque.
+
+Esta configuración utiliza credenciales locales de demostración y publica únicamente la aplicación web. La configuración de desarrollo con MySQL independiente sigue disponible en `back/compose.yaml`.
+
 ## Estado de esta rama
 
 `feature/apf3-frontend` incorpora el frontend funcional sobre el backend de `feature-backend.structure`. El catálogo, los formularios y la confirmación consumen la API existente. También conserva la [especificación previa de interfaz](docs/README_FRONTEND.md), integrada desde `dev` como antecedente de la implementación.
@@ -102,4 +116,4 @@ Desde `back`, `sh ./mvnw verify` ejecuta la suite rápida existente. Las pruebas
 
 `npm run build` genera `front/dist`. El despliegue necesita servir las rutas de la SPA con fallback a `index.html` y dirigir `/api` al backend, o configurar una URL pública de API con su CORS correspondiente. El proxy de Vite solo funciona durante el desarrollo.
 
-Esta rama no incluye despliegue ni flujo de CI. NVDA y las sesiones con grupos de usuarios siguen pendientes; los resultados automatizados no constituyen una certificación WCAG.
+El arranque local completo está disponible con Docker Compose. El flujo de CI, NVDA y las sesiones con grupos de usuarios siguen pendientes; los resultados automatizados no constituyen una certificación WCAG.

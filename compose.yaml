@@ -1,0 +1,53 @@
+name: ihm-demo
+
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: falabella_ihm
+      MYSQL_USER: ihm_app
+      MYSQL_PASSWORD: ${DB_PASSWORD:-ihm_demo_local}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-ihm_demo_root_local}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MYSQL_PASSWORD\" mysql -h 127.0.0.1 -u \"$$MYSQL_USER\" -D \"$$MYSQL_DATABASE\" -e 'SELECT 1' --silent >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+  backend:
+    image: ihm-backend:local
+    build: ./back
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/falabella_ihm
+      DB_USERNAME: ihm_app
+      DB_PASSWORD: ${DB_PASSWORD:-ihm_demo_local}
+      SERVER_FORWARD_HEADERS_STRATEGY: framework
+    depends_on:
+      mysql:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:8080/actuator/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+  frontend:
+    image: ihm-frontend:local
+    build: ./front
+    ports:
+      - "5173:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  mysql_data:
