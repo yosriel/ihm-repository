@@ -1,6 +1,6 @@
 # Alcance del prototipo Falabella IHM
 
-Este archivo conserva el resumen de las referencias APF1 y APF2. Esta rama desarrolla **solo backend con Spring Boot y MySQL**; el rediseño de interfaces se versiona por separado en [la entrega frontend](https://github.com/yosriel/ihm-repository/blob/codex/feature-frontend-specification/docs/ENTREGA_FRONTEND.md). Su [matriz de rúbricas](https://github.com/yosriel/ihm-repository/blob/codex/feature-frontend-specification/docs/MATRIZ_RUBRICAS.md) incorpora APF1, APF2 y R3. Las funcionalidades visuales de esta lista siguen pendientes de implementación; sus operaciones de catálogo, cotización y simulación ya tienen soporte en el [contrato de API](docs/API.md).
+Este archivo conserva el resumen de las referencias APF1 y APF2. La rama `dev` integra **el backend con Spring Boot y MySQL** y [la especificación frontend](docs/ENTREGA_FRONTEND.md). Su [matriz de rúbricas](docs/MATRIZ_RUBRICAS.md) incorpora APF1, APF2 y R3. Las funcionalidades visuales de esta lista siguen pendientes de implementación; sus operaciones de catálogo, cotización y simulación ya tienen soporte en el [contrato de API](docs/API.md).
 
 ## Fuentes
 

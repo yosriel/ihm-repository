@@ -84,7 +84,7 @@ Los importes son números JSON en soles. Mostrarlos con formato `es-PE` y dos de
 
 `GET /products/taurus-air-fry` devuelve el mismo objeto de producto, sin el envoltorio de paginación. Un identificador inexistente devuelve 404 con `field: "productId"`. En los datos iniciales `id` y `slug` coinciden.
 
-`image` es una **ruta del futuro frontend**, no un archivo servido por Spring. El equipo dispone de fotografías opcionales y sus fuentes en [la rama de documentación frontend](https://github.com/yosriel/ihm-repository/blob/codex/feature-frontend-specification/docs/FUENTES_IMAGENES.md), dentro de su carpeta `docs/frontend-assets/`. Copiarlas al directorio público con los nombres indicados si decide usarlas, o sustituirlas por imágenes adecuadas actualizando los datos mediante una migración. Las fotografías son referenciales y no acreditan las especificaciones del catálogo ficticio.
+`image` es una **ruta del futuro frontend**, no un archivo servido por Spring. El equipo dispone de fotografías opcionales y sus fuentes en [FUENTES_IMAGENES.md](FUENTES_IMAGENES.md), dentro de la carpeta `docs/frontend-assets/`. Copiarlas al directorio público con los nombres indicados si decide usarlas, o sustituirlas por imágenes adecuadas actualizando los datos mediante una migración. Las fotografías son referenciales y no acreditan las especificaciones del catálogo ficticio.
 
 ### Metadatos de filtros
 
@@ -235,4 +235,4 @@ Las validaciones de negocio devuelven JSON:
 
 Carrito, favoritos y selección de comparación pertenecen al estado del cliente en esta etapa. No hay cuentas, registro, autenticación ni sincronización de estas preferencias entre dispositivos. «Multiplataforma» describe una interfaz adaptable y operable, no sincronización de cuentas. No inventar endpoints para operaciones que no existen.
 
-Guardar como máximo identificadores y cantidades necesarios; volver a consultar precios y disponibilidad. Mantener la dirección en memoria durante el recorrido, fuera de URL y almacenamiento persistente. Las reglas de UI, navegación, accesibilidad y responsividad se especifican en [la guía de la rama frontend](https://github.com/yosriel/ihm-repository/blob/codex/feature-frontend-specification/docs/GUIA_FRONTEND.md).
+Guardar como máximo identificadores y cantidades necesarios; volver a consultar precios y disponibilidad. Mantener la dirección en memoria durante el recorrido, fuera de URL y almacenamiento persistente. Las reglas de UI, navegación, accesibilidad y responsividad se especifican en [GUIA_FRONTEND.md](GUIA_FRONTEND.md).

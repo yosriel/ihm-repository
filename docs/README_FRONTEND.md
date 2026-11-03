@@ -1,6 +1,6 @@
 # Entrega para el equipo frontend
 
-Esta rama, `codex/feature-frontend-specification`, se creó directamente desde `dev`. Sus cambios contienen documentación y fotografías referenciales; no implementan nuevas interfaces ni incorporan los cambios del backend. Las carpetas base `front` y `back` ya existían en `dev` y se conservan sin modificaciones en esta rama.
+La especificación se preparó en `feature-frontend.specification`, creada desde la base inicial de `dev`, y se integró en `dev` el 3 de noviembre de 2026 junto con el backend. Su aporte contiene documentación y fotografías referenciales; no implementa nuevas interfaces. La carpeta `front` conserva la base inicial y `back` ya incluye la API con MySQL.
 
 ## Documento que se puede compartir
 
@@ -19,16 +19,16 @@ La prioridad responsive incluye 360, 390, 768, 1024 y 1440 px; reflow a 320 px C
 
 ## Backend para integrar
 
-La API completa con Spring Boot y MySQL se encuentra en [feature-backend.structure](https://github.com/yosriel/ihm-repository/tree/feature-backend.structure). Debe ejecutarse desde esa rama o desde un entorno de integración que contenga sus cambios. El esqueleto de backend heredado de `dev` en esta rama no implementa ese contrato completo.
+La API completa con Spring Boot y MySQL ya está integrada en `dev`, procedente de [feature-backend.structure](https://github.com/yosriel/ihm-repository/tree/feature-backend.structure). Puede ejecutarse desde `back` siguiendo [sus instrucciones](../back/README.md), con las variables de conexión y una base MySQL del proyecto.
 
-La copia local de `API.md` corresponde exactamente al commit backend **`cb0df79e54609e3343dbd197a52284026cb28193`**, de esta entrega. El [contrato canónico de esa versión](https://github.com/yosriel/ihm-repository/blob/cb0df79e54609e3343dbd197a52284026cb28193/docs/API.md) queda identificado por ese commit; una actualización del backend requiere revisar la copia y la entrega consolidada antes de integrar.
+La versión funcional del contrato parte del commit backend **`cb0df79e54609e3343dbd197a52284026cb28193`**. El [contrato de esa versión](https://github.com/yosriel/ihm-repository/blob/cb0df79e54609e3343dbd197a52284026cb28193/docs/API.md) permite consultar el punto de partida; [API.md](API.md) es el contrato vigente en `dev`. La integración ajustó sus enlaces internos, sin cambiar rutas ni estructuras de respuesta. Una actualización funcional del backend requiere revisar también la entrega consolidada.
 
-Se copió el mismo archivo de contrato, sin alterar su contenido, para evitar contratos distintos en las dos ramas. El equipo frontend consume HTTP; no necesita ni debe incluir credenciales MySQL en el navegador.
+Las dos ramas aportaron inicialmente el mismo contrato, lo que permitió combinarlas sin conflicto. El equipo frontend consume HTTP; no necesita ni debe incluir credenciales MySQL en el navegador.
 
 ## Orden de versiones
 
 - Base común: `dev` en `13a41ab`.
 - Funcionalidad backend: `feature-backend.structure`.
-- Especificación frontend: `codex/feature-frontend-specification`.
+- Especificación frontend: `feature-frontend.specification`.
 
-Ambas ramas son independientes desde la base indicada. La publicación de estos cambios no los fusiona automáticamente con `dev` o `main`; esa integración se realizará mediante la revisión que establezca el equipo.
+Ambas ramas partieron de la base indicada y se fusionaron en `dev` mediante commits de integración separados el 3 de noviembre de 2026. `main` conserva su versión anterior. Los siguientes cambios se prepararán como nuevas ramas de funcionalidad desde `dev` según el flujo del equipo.

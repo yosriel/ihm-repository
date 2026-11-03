@@ -2,17 +2,18 @@
 
 Backend del prototipo académico de búsqueda y preparación de compra de Falabella, con Spring Boot, Java 21 y MySQL. Los productos y precios son ficticios; el cierre es una simulación sin cobro ni pedido real.
 
-Esta rama, `feature-backend.structure`, entrega **el backend**. La carpeta `front` conserva la base heredada de `dev`. La documentación de rediseño, accesibilidad y responsividad se versiona por separado en [la rama de especificación frontend](https://github.com/yosriel/ihm-repository/tree/codex/feature-frontend-specification).
+La rama `dev` integra el backend de `feature-backend.structure` y la documentación de `feature-frontend.specification`. La carpeta `front` conserva la base inicial; las nuevas interfaces siguen pendientes de implementación según [la especificación frontend](docs/README_FRONTEND.md).
 
-## Documentación del backend
+## Documentación del proyecto
 
 | Documento | Contenido |
 | --- | --- |
 | [Contrato de API](docs/API.md) | Endpoints, filtros, paginación, datos, ejemplos, errores e idempotencia |
 | [Modelo de datos](docs/BASE_DATOS.md) | Tablas MySQL, relaciones, migraciones y datos de demostración |
 | [Verificación](docs/VERIFICACION.md) | Comprobaciones realmente ejecutadas y sus límites |
+| [Entrega frontend](docs/ENTREGA_FRONTEND.md) | Guía autónoma de rediseño, responsividad, accesibilidad, contrato API y rúbricas |
 
-La [entrega frontend en Markdown](https://github.com/yosriel/ihm-repository/blob/codex/feature-frontend-specification/docs/ENTREGA_FRONTEND.md) define inicio, catálogo, filtros, comparación, ficha, favoritos, carrito, entrega, revisión y confirmación. Estas interfaces están **pendientes de implementación por el equipo frontend** y no forman parte del cambio de esta rama.
+La [entrega frontend en Markdown](docs/ENTREGA_FRONTEND.md) define inicio, catálogo, filtros, comparación, ficha, favoritos, carrito, entrega, revisión y confirmación. Estas interfaces están **pendientes de implementación por el equipo frontend**; la integración actual incorpora su documentación.
 
 ## Backend implementado
 
