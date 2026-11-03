@@ -1,5 +1,7 @@
 # Guía de rediseño frontend de Falabella
 
+Este documento conserva la especificación y planificación previas a la implementación. El frontend funcional se describe en [FRONTEND.md](FRONTEND.md) y sus resultados y pendientes actuales en [VERIFICACION_FRONTEND.md](VERIFICACION_FRONTEND.md). Los estados de planificación del texto original no sustituyen ese registro de ejecución.
+
 Documento de entrega al equipo frontend. Fecha: 2 de noviembre de 2026.
 
 Esta guía define la experiencia que se implementará con React sobre el backend Spring Boot y MySQL de este repositorio. El alcance actual entrega **backend y documentación**: las interfaces descritas aquí son especificaciones para el equipo frontend y no se presentan como pantallas ya programadas, probadas o publicadas.

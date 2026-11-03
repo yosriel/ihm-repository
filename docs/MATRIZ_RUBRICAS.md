@@ -1,5 +1,7 @@
 # Matriz de rúbricas y rediseño de Falabella
 
+Este documento conserva la especificación y planificación previas a la implementación. El frontend funcional se describe en [FRONTEND.md](FRONTEND.md) y sus resultados y pendientes actuales en [VERIFICACION_FRONTEND.md](VERIFICACION_FRONTEND.md). Los estados de planificación del texto original no sustituyen ese registro de ejecución.
+
 Fecha de revisión: 2 de noviembre de 2026. Estado: planificación de cobertura y evidencia pendiente. Este documento relaciona el rediseño con las rúbricas; no asigna una calificación ni acredita pruebas que todavía no se realizaron.
 
 Alcance vigente: backend Spring Boot con MySQL y documentación para el equipo frontend. Las decisiones de UI son propuestas para implementar después, detalladas en [GUIA_FRONTEND.md](GUIA_FRONTEND.md); no implican que se haya programado o auditado el frontend. El contrato técnico se centraliza en [API.md](API.md).

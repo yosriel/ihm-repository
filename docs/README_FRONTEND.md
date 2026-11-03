@@ -1,5 +1,7 @@
 # Entrega para el equipo frontend
 
+Este documento conserva la especificación y planificación previas a la implementación. El frontend funcional se describe en [FRONTEND.md](FRONTEND.md) y sus resultados y pendientes actuales en [VERIFICACION_FRONTEND.md](VERIFICACION_FRONTEND.md). Los estados de planificación del texto original no sustituyen ese registro de ejecución.
+
 La especificación se preparó en `feature-frontend.specification`, creada desde la base inicial de `dev`, y se integró en `dev` el 3 de noviembre de 2026 junto con el backend. Su aporte contiene documentación y fotografías referenciales; no implementa nuevas interfaces. La carpeta `front` conserva la base inicial y `back` ya incluye la API con MySQL.
 
 ## Documento que se puede compartir

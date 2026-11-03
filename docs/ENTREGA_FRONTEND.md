@@ -1,5 +1,7 @@
 # Entrega al equipo frontend de Falabella IHM
 
+Este documento conserva la especificación y planificación previas a la implementación. El frontend funcional se describe en [FRONTEND.md](FRONTEND.md) y sus resultados y pendientes actuales en [VERIFICACION_FRONTEND.md](VERIFICACION_FRONTEND.md). Los estados de planificación del texto original no sustituyen ese registro de ejecución.
+
 Fecha de corte: 2 de noviembre de 2026.
 
 Este archivo reúne la especificación completa para implementar el frontend en React. Incluye rediseño de pantallas, comportamiento responsive y multiplataforma, accesibilidad, contrato real del backend Spring Boot con MySQL, criterios de aceptación y relación con las rúbricas APF1, APF2 y R3. Se puede compartir como un único Markdown.

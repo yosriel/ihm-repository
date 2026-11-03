@@ -1,6 +1,6 @@
-# Fotografías referenciales para el equipo frontend
+# Fuentes de las fotografías del frontend
 
-Consulta y descarga: 2 de noviembre de 2026. Fotografías procedentes de sitios oficiales de fabricantes y sus servidores de imágenes. Se entregan como material opcional en `docs/frontend-assets/`; esta etapa no implementa el frontend. El equipo podrá copiarlas a su directorio público conservando los nombres y las atribuciones.
+Consulta y descarga: 2 de noviembre de 2026. Fotografías procedentes de sitios oficiales de fabricantes y sus servidores de imágenes. Las copias utilizadas por la interfaz se encuentran en `front/public/images/`, con los nombres y las atribuciones de la especificación original.
 
 Las fotografías son referenciales. Los nombres de variantes, precios, vendedores, valoraciones, disponibilidad, costos de entrega y especificaciones que muestre el catálogo académico son datos de demostración; no constituyen una oferta comercial ni se verificaron a partir de estas imágenes.
 

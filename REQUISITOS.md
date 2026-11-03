@@ -1,62 +1,69 @@
-# Alcance del prototipo Falabella IHM
+# Alcance y requisitos de Falabella
 
-Este archivo conserva el resumen de las referencias APF1 y APF2. La rama `dev` integra **el backend con Spring Boot y MySQL** y [la especificación frontend](docs/ENTREGA_FRONTEND.md). Su [matriz de rúbricas](docs/MATRIZ_RUBRICAS.md) incorpora APF1, APF2 y R3. Las funcionalidades visuales de esta lista siguen pendientes de implementación; sus operaciones de catálogo, cotización y simulación ya tienen soporte en el [contrato de API](docs/API.md).
+Este archivo relaciona los antecedentes APF1 y APF2 con la implementación actual. En `feature/apf3-frontend`, las interfaces ya están desarrolladas en React sobre el backend Spring Boot con MySQL. La [arquitectura frontend](docs/FRONTEND.md) y el [contrato de API](docs/API.md) describen el comportamiento vigente.
 
-## Fuentes
+## Antecedentes
 
-Archivos originales, conservados en el escritorio del usuario:
+Las referencias usadas para establecer el caso son:
 
 - `APF1_Falabella_IHM.pptx`.
 - `Informe_Avance_I_Falabella_APF1 (1).docx`.
 - `Falabella_APF2_Presentacion_Completa.pptx.pdf`.
 - `Informe_Final_Falabella_APF2 (1).docx`.
 
-APF2 describe la propuesta más reciente. APF1 aporta antecedentes y recomendaciones de usabilidad. Las rúbricas e instrucciones de exposición contenidas en esos archivos se tratan como material de referencia.
+APF2 define los dos procesos y las mejoras previas de filtros, jerarquía de productos, dirección y costos. Sus métricas y revisiones de Figma son antecedentes; no se atribuyen como pruebas de la nueva aplicación.
+
+La [especificación frontend previa](https://github.com/yosriel/ihm-repository/tree/feature-frontend.specification/docs) conserva el diseño propuesto y su matriz de rúbricas. Los cambios de esta rama convierten los recorridos en una interfaz conectada a la API.
 
 ## Objetivo
 
-Reducir la carga visual al buscar productos y aclarar vendedor, dirección, modalidad de entrega y costo final. El caso principal consiste en encontrar una freidora con un presupuesto aproximado de S/ 400 y completar una simulación de compra.
+Reducir la carga visual al buscar productos y aclarar vendedor, dirección, modalidad de entrega y costo final. El caso de referencia consiste en encontrar una freidora con presupuesto aproximado de S/ 400 y completar una confirmación simulada.
 
-## Recorrido de búsqueda y selección
+## Proceso 1 Buscar y seleccionar
 
-- Mantener búsqueda, ordenamiento y resultados en una misma vista.
-- Mostrar seis filtros principales: Precio, Marca, Descuento, Calificación, Tipo de entrega y Vendedor.
-- Agrupar filtros secundarios bajo «Más filtros» y evitar atributos duplicados.
-- Permitir aplicar, cambiar y cancelar un presupuesto desde un panel lateral, manteniendo visible el catálogo. El ejemplo ofrece «Hasta S/ 400» y «Sin límite de precio» y muestra dos resultados al filtrar.
-- Organizar las tarjetas con imagen amplia y posiciones consistentes para nombre, vendedor y precio; dar menor énfasis a valoración y precio anterior.
-- Mostrar confirmación de cantidad y precio al agregar un producto y ofrecer «Ver carro» y «Seguir explorando».
-- Incorporar reversibilidad de filtros, etiquetas, foco visible y navegación con teclado como criterios de diseño.
+| Requisito | Estado actual |
+| --- | --- |
+| Búsqueda, orden y resultados en una vista | Implementado con parámetros de URL y datos de la API |
+| Precio, marca, descuento, calificación, entrega y vendedor | Implementado; selección única por criterio, combinable con otros criterios |
+| Filtros secundarios sin duplicación | Capacidad y color dentro del panel de filtros |
+| Aplicar, cancelar y quitar filtros | Implementado con borrador, chips y restablecimiento |
+| Identificación de vendedor y precio | Visible en tarjetas y ficha |
+| Selección, cantidad y agregado | Implementado, con límites y feedback en la ficha |
+| Favoritos y comparación | Favoritos del navegador y comparación de hasta tres productos |
+| Acceso con teclado y nombres de controles | Implementado y cubierto parcialmente por pruebas automáticas y revisión manual |
 
-Referencias: informe APF2, criterios 3 y 4 y figuras 1, 3, 4 y 5; presentación APF2, páginas 15–18. Las recomendaciones de vendedor y reversibilidad también aparecen en APF1.
+El panel lateral de APF2 se sustituyó por herramientas superiores y un diálogo de filtros. La selección de precio ya no depende de un único estado fijo «Hasta S/ 400»: admite límites numéricos del contrato.
 
-## Recorrido de carrito y entrega
+## Proceso 2 Carrito y entrega
 
-- Permitir modificar cantidades, eliminar productos y mostrar el carrito vacío. Conservar cantidades al navegar.
-- Ayudar a completar dirección y referencia; ofrecer «Dirección sin número» y una confirmación de ubicación.
-- Mostrar un error específico para una dirección inválida y deshabilitar la confirmación hasta corregirla; comunicar el error también con texto.
-- Permitir elegir entrega a domicilio o retiro, conservando modalidad y costos al avanzar.
-- Separar productos, entrega y total en el resumen.
-- Mantener «Finalizar simulación» deshabilitado hasta aceptar las condiciones y mostrar después un cierre académico.
+| Requisito | Estado actual |
+| --- | --- |
+| Cantidades, eliminación y carrito vacío | Implementado; el carrito se conserva en el navegador |
+| Domicilio o retiro | Implementado según la compatibilidad de los productos |
+| Distrito, calle, número y referencia | Validación de formato y cobertura, con alternativa sin número |
+| Revisión explícita de dirección | Implementada; modificar datos invalida la revisión |
+| Corrección de errores | Mensajes por campo y resumen con enlaces |
+| Productos, entrega y total separados | Implementado; la cotización válida proviene del servidor |
+| Condiciones antes del cierre | Casilla sin marcar inicialmente y acción habilitada tras cumplir requisitos |
+| Finalización y recuperación | Respuesta de `/checkout/simulate`, clave idempotente y carrito conservado ante fallo |
 
-Referencias: informe APF2, figuras 6–10 y apartado de verificación manual; presentación APF2, páginas 19–23.
+El botón visible «Confirmar compra» mantiene el cierre simulado. La revisión de dirección confirma lo escrito; no utiliza un servicio geográfico. La interfaz no solicita tarjetas ni ejecuta cobros.
 
-## Datos de ejemplo
+## Importes de referencia
 
-Los siguientes importes pertenecen a la simulación descrita en APF2. No representan tarifas generales ni precios vigentes de Falabella.
+Estos importes corresponden a los datos iniciales del catálogo y al escenario Taurus; el frontend utiliza los valores vigentes de la API.
 
-| Cantidad de freidoras Taurus | Modalidad | Productos | Entrega | Total |
+| Unidades | Modalidad | Productos | Entrega | Total |
 | ---: | --- | ---: | ---: | ---: |
 | 1 | Domicilio | S/ 389.00 | S/ 12.90 | S/ 401.90 |
 | 1 | Retiro | S/ 389.00 | S/ 0.00 | S/ 389.00 |
 | 2 | Domicilio | S/ 778.00 | S/ 12.90 | S/ 790.90 |
 | 2 | Retiro | S/ 778.00 | S/ 0.00 | S/ 778.00 |
 
-Referencia: informe APF2, «Cantidades y costos de la simulación»; presentación APF2, página 23. El modelo exacto de la freidora no queda identificado en el texto extraído.
+## Límites de la implementación
 
-## Límites y decisiones pendientes
-
-El alcance documentado usa datos ficticios y cierre simulado, sin cobros ni pedidos reales. La versión principal es de escritorio; el checkout móvil completo y la accesibilidad necesitan desarrollo y validación adicionales.
-
-Los documentos no definen una base de datos ni una arquitectura de API. La decisión del usuario establece ahora MySQL: se almacenan catálogo y simulaciones; carrito, favoritos y comparación corresponden al estado del futuro frontend. No hay cuentas ni autenticación en esta etapa. El límite de dos unidades y las seis zonas de domicilio se usan como reglas de la demostración, sin convertirlas en políticas comerciales generales. La validación de dirección comprueba formato, sin proveedor de geocodificación.
-
-Los resultados de evaluación incluidos en APF1 y APF2 corresponden a sus antecedentes académicos. No son pruebas realizadas sobre esta nueva aplicación.
+- MySQL almacena catálogo y simulaciones. Carrito y favoritos pertenecen al navegador; dirección y comparación se mantienen en memoria.
+- No hay cuentas, autenticación, sincronización entre dispositivos, geocodificación ni pagos reales.
+- Precios, valoraciones, stock y fotografías corresponden al catálogo de demostración; no establecen condiciones comerciales de Falabella.
+- La interfaz tiene distribución de escritorio y móvil. La cobertura por tamaño y sus límites están en [VERIFICACION_FRONTEND.md](docs/VERIFICACION_FRONTEND.md).
+- NVDA, sesiones de usuarios y evidencia académica completa siguen pendientes. La aplicación no declara conformidad WCAG completa.

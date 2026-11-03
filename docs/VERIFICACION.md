@@ -1,5 +1,7 @@
 # Verificación de la entrega backend
 
+Este documento conserva la verificación histórica de la entrega backend `cb0df79`. Para el frontend incorporado después, consulta [VERIFICACION_FRONTEND.md](VERIFICACION_FRONTEND.md).
+
 Fecha: 2 de noviembre de 2026. Alcance verificado: API Spring Boot, migraciones, persistencia MySQL, reglas de la simulación y documentación para el equipo frontend.
 
 ## Resultados ejecutados
@@ -43,11 +45,11 @@ Maven genera el JAR en `back/target/ihm-back-0.0.1-SNAPSHOT.jar`, los resultados
 
 El servidor recomendado por Compose es MySQL 8.4. Se validó la configuración de Compose, pero no su arranque porque el motor Docker no estaba activo; las pruebas reales de base de datos se ejecutaron con MySQL 8.0.46. No se atribuye a MySQL 8.4 una ejecución que no se realizó.
 
-## Verificación pendiente del frontend y del entregable académico
+## Estado del frontend al entregar el backend
 
-Esta entrega no desarrolla nuevas pantallas. No hay resultados de responsividad, contraste, teclado, WAVE, axe, NVDA ni sesiones de usuarios del futuro rediseño. Tampoco se generaron capturas DESPUÉS que acrediten una interfaz inexistente.
+Al entregar el backend el 2 de noviembre todavía no se habían desarrollado nuevas pantallas ni ejecutado comprobaciones del rediseño. Ese estado histórico fue actualizado por la implementación de `feature/apf3-frontend`; los resultados actuales y sus pendientes se registran en [VERIFICACION_FRONTEND.md](VERIFICACION_FRONTEND.md).
 
-[La guía frontend](GUIA_FRONTEND.md), integrada en `dev` junto con el backend, define los casos por tamaño, plataforma y estado. [La matriz de rúbricas](MATRIZ_RUBRICAS.md) identifica la auditoría, las capturas anotadas, los grupos, las métricas y las evidencias humanas que siguen pendientes. Los resultados de backend no demuestran conformidad WCAG ni completan por sí solos las rúbricas.
+[La especificación frontend previa](GUIA_FRONTEND.md), conservada en este repositorio, define los casos por tamaño, plataforma y estado. [La matriz de rúbricas](MATRIZ_RUBRICAS.md) identifica la auditoría, las capturas anotadas, los grupos, las métricas y las evidencias humanas que siguen pendientes. Los resultados de backend no demuestran conformidad WCAG ni completan por sí solos las rúbricas.
 
 ## Integración en dev el 3 de noviembre de 2026
 
